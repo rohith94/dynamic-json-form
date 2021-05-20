@@ -30,15 +30,14 @@ export default function App() {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-         console.log(e.target[0].id)
-         console.log(e.target[1].id)
-
+          console.log(e.target[0].id);
+          console.log(e.target[1].id);
         }}
       >
-        {json.map((a, i) => {
+        {json.map((jsonValue, i) => {
           return (
             <div key={i}>
-              <Element param={a} />
+              <Element param={jsonValue} />
             </div>
           );
         })}
